@@ -42,32 +42,32 @@ h3,
 h4 {
     font-weight: 400;
     text-transform: uppercase;
-    color: #fff;
+    color: red;
 }
 
 h1 {
     margin: 0 0 5px 0;
-    font-size: 400%;
+    font-size: 10vh;
     word-spacing: 4px;
     letter-spacing: 7px;
 }
 
 h2 {
     color: #343434;
-    font-size: 300%;
+    font-size: 8vh;
     word-spacing: 2px;
     text-align: left;
     margin-bottom: 30px;
 }
 
 h3 {
-    font-size: 110%;
+    font-size: 5vh;
     margin-bottom: 15px;
 }
 
 h4 {
-    font-size: 120%;
-    margin: 0;
+    font-size: 3vh;
+    margin: 0 auto;
     letter-spacing: 6px;
 }
 
@@ -75,7 +75,7 @@ h4 {
 .btn:link,
 .btn:visited,
 input[type=submit] {
-    display: inline-block;
+    font-size: 2vh;
     padding: 10px 30px;
     font-weight: 300;
     text-decoration: none;
@@ -117,12 +117,11 @@ header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(backgrounds/intro-background.jpg);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     height: 100vh;
 }
 
-#header-text {
-top: 40%;
+.header-text {
+top: 40vh;
 left: 25%;
 }
 
@@ -141,12 +140,92 @@ left: 25%;
     padding-bottom: 0;
 }
 
-#about-text {
-    top: 40%;
-    left: 10%;
-    color: #343434;
-    width: 60%
+.about-text {
+    top: 20vh;
+    padding: 10% 0 0 10%;
+    color: red;
+    width: 60%;
 }
-#about-text a{
 
+.about-text h2 {
+    margin-top: 0;
+}
+
+/* --------------------------------------------------*/
+/*PORTFOLIO*/
+/* --------------------------------------------------*/
+#portfolio {
+      background-color: #343434;
+}
+
+#portfolio-text{
+top: 33%;
+left: 40%;
+z-index: 9999;
+}
+
+#portfolio-text h2,
+#portfolio-text p {
+    text-align: center;
+    color: red;
+}
+
+.portfolio-container {
+   height: 100%;
+   background-image: url(backgrounds/portfolio-background.png);
+   background-repeat: no-repeat;
+   background-position: bottom left;
+   background-size: contain;
+   padding-bottom: 0;
+   /*background-attachment: fixed;*/
+}
+
+#portfolio-text .btn:link,
+#portfolio-text .btn:visited,
+input[type=submit] {
+margin-left: 35%;
+    color: #343434;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+#portfolio-text .btn:hover,
+#portfolio-text .btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    left: 10%;
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #343434;
+}
+
+/* --------------------------------------------------*/
+/*CONTACT*/
+/* --------------------------------------------------*/
+
+
+
+/* --------------------------------------------------*/
+/*ANIMATE*/
+/* --------------------------------------------------*/
+
+.ng-hide{
+  display: block!important;
+  visibility: hidden;
+}
+
+.header-text.ng-hide-add {
+  animation:0.5s fadeOut ease;
+  visibility: visible;
+}
+.header-text.ng-hide-remove {
+  animation:0.5s fadeIn ease;
+}
+
+.about-text.ng-hide-add {
+  animation:0.5s fadeOut ease;
+  visibility: visible;
+}
+.about-text.ng-hide-remove {
+  animation:0.5s fadeIn ease;
 }

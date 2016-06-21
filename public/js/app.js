@@ -1,5 +1,1 @@
-var app = angular.module('perfectDesign', [ ]);
-
-// app.controller('MainCtrl', ['$scope', function($scope) {
-//     $scope.hi = 'hello';
-// }]);
+var app = angular.module('perfectDesign', ['ngAnimate', 'scroll-animate-directive']);

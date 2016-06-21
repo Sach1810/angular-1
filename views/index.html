@@ -4,49 +4,103 @@
 <head>
     <meta charset="utf-8">
     <title>That Perfect Design</title>
-        <link rel="stylesheet" href="css/grid.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,300italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animate.css">
     <script type="text/javascript" src="angular/angular.js"></script>
-    <!-- <script type="text/javascript" src="angular-animate/angular-animate.min.js"></script> -->
+    <script type="text/javascript" src="angular-animate/angular-animate.min.js"></script>
 
+    <!-- <script src="angular-inview/angular-inview.js"></script> -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+      <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script> -->
+    <!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,300italic" rel="stylesheet" type="text/css">
 </head>
-<body ng-app="perfectDesign">
+
+<body ng-app="perfectDesign" ng-controller="MainCtrl" data-my-navscroll>
     <!-- **********INFO********** -->
     <div id="section-info">
-            <div id="header-text" class="animated-text" ng-controller="MainCtrl">
 
-                <h1>Sacha David</h1>
-                <h4>"The limit is no longer the sky"</h4>
-            </div>
-            <div id="about-text" class="animated-text">
+
+
+
+
+    </div>
+    <!-- **********BACKGROUNDS********** -->
+
+    <header id="header">
+        <div class="header-text animated-text" ng-show="section === 1">
+            <h4></h4>
+            <h1>Sacha David</h1>
+            <h4>"The limit is no longer the sky"</h4>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="about-container">
+            <div class="about-text animated-text" ng-show="section === 2">
                 <h2>About</h2>
                 <p>
                     Growing up in a world where technology is moving so fast inspires me to want to join in. with this revolution and create things that will challenge and inspire me further.
                     <br />
-                    <br />
-                    Always having an inquisitive mind forces me to always better myself by dreaming up what seems the impossible and solving it.
+                    <br /> Always having an inquisitive mind forces me to always better myself by dreaming up what seems the impossible and solving it.
                 </p>
                 <br />
                 <a class="btn" href="#">Find out more</a>
             </div>
-
-    </div>
-<!-- **********BACKGROUNDS********** -->
-    <header id="header">
-
-    </header>
-    <section id="about">
-        <div class="about-container">
-
         </div>
     </section>
-<!-- **********SCRIPTS********** -->
-    <script type="text/javascript" src="js/app.js"></script>
-    <script type="text/javascript" src="js/controllers/main-controller.js"></script>
+
+    <section id="portfolio">
+        <div class="portfolio-container">
+            <div id="portfolio-text" class="animated-text" ng-show="section === 3">
+                <h2>Portfolio</h2>
+                <p>
+                    From Javascript to Photoshop see all my available work
+                </p>
+                <br />
+                <a class="btn" href="#">Go now</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <form ng-submit="sendEmail()" id="contact-form" >
+            <input ng-model="name" type="text" class="name" placeholder="Full name"/>
+            <input ng-model="email" type="text" class="email" placeholder="Email" />
+            <!-- <div class="g-recaptcha" data-sitekey="6LfvEiMTAAAAABn9oePTpUCTei2EwgjG-XodzsLK"></div> -->
+            <button type="submit">sendEmail</button>
+            {{name}}
+            {{email}}
+        </form>
+
+    </section>
+
+    <!-- <script>
+      $(document).ready(function() {
+        $('#contact-form').submit(function() {
+          $(this).ajaxSubmit({
+            error: function(xhr) {
+              status('Error: ' + xhr.status);
+            },
+           success: function(response) {
+            console.log(response);
+           }
+          });
+          //Very important line, it disable the page refresh.
+          return false;
+        });
+      });
+    </script> -->
+    <!-- **********SCRIPTS********** -->
     <!-- <script type="text/javascript" src="js/directives/scroll-animate-directive.js"></script> -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <script src="js/directives/scroll-directive.js"></script>
+    <script src="js/directives/test.js"></script>
+    <script type="text/javascript" src="js/controllers/main-controller.js"></script>
+    <script type="text/javascript" src="js/services/contact.js"></script>
+
 
 </body>
 

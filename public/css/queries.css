@@ -1,0 +1,89 @@
+/ * Big tablet to 1200px width smaller than pixel row */ @media only screen and (max-width: 1200px) {
+    .header-text {
+        left: 22vw;
+        width: 56vw;
+    }
+    .header-text h4 {
+        font-size: 2vh;
+    }
+    .about-text h4 {
+        letter-spacing: 3px;
+    }
+
+    .portfolio-text h4 {
+        letter-spacing: 3px;
+    }
+}
+
+/* small tablet to big tablet */
+
+@media only screen and (max-width: 1023px) {
+    .header-text {
+        left: 17vw;
+        width: 66vw;
+    }
+    .header-text h1 {
+        font-size: 8vh;
+    }
+    .header-text h4 {
+        font-size: 2vh;
+    }
+}
+
+/* Small phones to small tablets*/
+
+@media only screen and (max-width: 767px) {
+    .header-text {
+        left: 9vw;
+        width: 82vw;
+    }
+    .header-text h1 {
+        font-size: 6.5vh;
+    }
+    .header-text h4 {
+        font-size: 1.5vh;
+    }
+    .portfolio-text {
+        width: 80vw;
+        left: 10vw;
+    }
+
+    .portfolio-container {
+        width: 100vw;
+        background-image: linear-gradient(rgba(52, 52, 52, 0.7), rgba(52, 52, 52, 0.7)), url(backgrounds/portfolio-background.png);
+        background-image: -webkit-linear-gradient(rgba(52, 52, 52, 0.7), rgba(52, 52, 52, 0.7)), url(backgrounds/portfolio-background.png);
+    }
+}
+
+/* Small phones */
+
+@media only screen and (max-width: 480px) {
+    .header-text {
+        left: 5vw;
+        width: 90vw;
+    }
+
+    .header-text h1 {
+        font-size: 6vh;
+    }
+
+    .header-text h4 {
+        font-size: 2vh;
+    }
+
+    .about-text {
+        width: 80vw;
+        left: 10vw;
+        padding: 0;
+    }
+
+    .about-container {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(backgrounds/about.png);
+        background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(backgrounds/about.png);
+    }
+
+    .portfolio-text {
+        width: 90vw;
+        left: 5vw;
+    }
+}

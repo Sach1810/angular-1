@@ -2,8 +2,7 @@
 /*BASIC SETUP*/
 /* --------------------------------------------------*/
 
-html,
-body {
+html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,16 +13,6 @@ body {
     overflow-x: hidden
 }
 
-/*.clearfix {zoom: 1}
-.clearfix:after {
-    content: '.';
-    clear: both;
-    display: block;
-    height: 0;
-    visibility: hidden;
-}*/
-/*Above clears the float after an element needs to be added the parent of the items with the float*/
-
 /* --------------------------------------------------*/
 /*REUSABLE COMPONENTS*/
 /* --------------------------------------------------*/
@@ -33,48 +22,47 @@ body {
     margin: 0 auto;
 }
 
-section { height: 70vh; }
-
-/* -----HEADINGS-----*/
-h1,
-h2,
-h3,
-h4 {
-    font-weight: 400;
-    text-transform: uppercase;
-    color: red;
+section {
+    height: 70vh;
+    min-height: 300px;
 }
 
+/* -----HEADINGS-----*/
+
+h1, h2, h3, h4 {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+}
 h1 {
     margin: 0 0 5px 0;
     font-size: 10vh;
     word-spacing: 4px;
     letter-spacing: 7px;
+    min-font-size: 30px;
 }
-
 h2 {
     color: #343434;
     font-size: 8vh;
     word-spacing: 2px;
     text-align: left;
     margin-bottom: 30px;
+    min-font-size: 30px;
 }
-
 h3 {
     font-size: 5vh;
     margin-bottom: 15px;
 }
-
 h4 {
     font-size: 3vh;
     margin: 0 auto;
     letter-spacing: 6px;
+    min-font-size: 10px;
 }
 
 /* -----BUTTONS-----*/
-.btn:link,
-.btn:visited,
-input[type=submit] {
+
+.btn:link, .btn:visited, input[type=submit] {
     font-size: 2vh;
     padding: 10px 30px;
     font-weight: 300;
@@ -85,25 +73,20 @@ input[type=submit] {
     color: #343434;
     transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
-
-.btn:hover,
-.btn:active,
-input[type=submit]:hover,
-input[type=submit]:active {
+.btn:hover, .btn:active, input[type=submit]:hover, input[type=submit]:active {
     background-color: #343434;
     border: 1px solid #343434;
     color: #fff;
 }
 
 /* -----INFO-----*/
+
 .animated-text {
     position: fixed;
 }
-
 .info-container {
     width: 100%;
 }
-
 .hide {
     display: none;
 }
@@ -119,19 +102,18 @@ header {
     background-position: center;
     height: 100vh;
 }
-
 .header-text {
-top: 40vh;
-left: 25%;
+    top: 40vh;
+    left: 25vw;
+    width: 50vw;
+    text-align: center;
 }
-
-
 
 /* --------------------------------------------------*/
 /*ABOUT*/
 /* --------------------------------------------------*/
 
- .about-container {
+.about-container {
     height: 100%;
     background-image: url(backgrounds/about.png);
     background-repeat: no-repeat;
@@ -139,61 +121,77 @@ left: 25%;
     background-size: contain;
     padding-bottom: 0;
 }
-
 .about-text {
-    top: 20vh;
-    padding: 10% 0 0 10%;
-    color: red;
-    width: 60%;
+    top: 25vh;
+    left: 8vw;
+    padding: 0 0 0 5vw;
+    color: #343434;
+    color: #343434;
+    width: 60vw;
+    text-align: center;
 }
 
 .about-text h2 {
+    width: 100%;
     margin-top: 0;
+    text-align: center;
+}
+
+.about-text h4 {
+    color:#343434;
+    text-transform: none;
+    font-weight: 300;
+}
+
+.btn-about-container{
+    width: 100%;
+    padding-top: 5vh;
+    text-align: center;
 }
 
 /* --------------------------------------------------*/
 /*PORTFOLIO*/
 /* --------------------------------------------------*/
+
 #portfolio {
-      background-color: #343434;
+    background-color: #343434;
 }
-
-#portfolio-text{
-top: 33%;
-left: 40%;
-z-index: 9999;
+.portfolio-text {
+    top: 20vh;
+    left: 33vw;
+    width: 60vw;
+    text-align:center;
 }
-
-#portfolio-text h2,
-#portfolio-text p {
+.portfolio-text h2, .portfolio-text p {
     text-align: center;
-    color: red;
-}
-
-.portfolio-container {
-   height: 100%;
-   background-image: url(backgrounds/portfolio-background.png);
-   background-repeat: no-repeat;
-   background-position: bottom left;
-   background-size: contain;
-   padding-bottom: 0;
-   /*background-attachment: fixed;*/
-}
-
-#portfolio-text .btn:link,
-#portfolio-text .btn:visited,
-input[type=submit] {
-margin-left: 35%;
-    color: #343434;
-    border: 1px solid #fff;
     color: #fff;
 }
 
-#portfolio-text .btn:hover,
-#portfolio-text .btn:active,
-input[type=submit]:hover,
-input[type=submit]:active {
-    left: 10%;
+.portfolio-text h4 {
+    text-transform: none;
+    font-weight: 300;
+}
+.portfolio-container {
+    width: 70vw;
+    height: 100%;
+    background-image: url(backgrounds/portfolio-background.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: contain;
+    padding-bottom: 0;
+}
+
+.btn-portfolio-container{
+    width: 100%;
+    padding-top: 5vh;
+    text-align: center;
+}
+.portfolio-text .btn:link, .portfolio-text .btn:visited, input[type=submit] {
+    color: #fff;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.portfolio-text .btn:hover, .portfolio-text .btn:active, input[type=submit]:hover, input[type=submit]:active {
     background-color: #fff;
     border: 1px solid #fff;
     color: #343434;
@@ -202,30 +200,57 @@ input[type=submit]:active {
 /* --------------------------------------------------*/
 /*CONTACT*/
 /* --------------------------------------------------*/
+#contact h2 {
+        text-align: center;
+}
 
+#contact-form {
+    width: 60%;
+    margin: 0 auto;
 
+}
+input[type=text], input[type=email], select, textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+textarea {
+    height: 100px;
+}
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+*:focus {
+    outline: none;
+}
 
 /* --------------------------------------------------*/
 /*ANIMATE*/
 /* --------------------------------------------------*/
 
-.ng-hide{
-  display: block!important;
-  visibility: hidden;
+.ng-hide {
+    display: block!important;
+    visibility: hidden;
 }
-
 .header-text.ng-hide-add {
-  animation:0.5s fadeOut ease;
-  visibility: visible;
+    animation: 0.5s fadeOut ease;
+    visibility: visible;
 }
 .header-text.ng-hide-remove {
-  animation:0.5s fadeIn ease;
+    animation: 0.5s fadeIn ease;
 }
-
 .about-text.ng-hide-add {
-  animation:0.5s fadeOut ease;
-  visibility: visible;
+    animation: 0.5s fadeOut ease;
+    visibility: visible;
 }
 .about-text.ng-hide-remove {
-  animation:0.5s fadeIn ease;
+    animation: 0.5s fadeIn ease;
+}
+.portfolio-text.ng-hide-add {
+    animation: 0.5s fadeOut ease;
+    visibility: visible;
+}
+.portfolio-text.ng-hide-remove {
+    animation: 0.5s fadeIn ease;
 }

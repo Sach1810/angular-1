@@ -12,9 +12,11 @@
     "angular": "^1.5.7",
     "angular-animate": "^1.5.7",
     "angular-no-captcha": "^0.6.0",
+    "angular-recaptcha": "^3.0.3",
     "animate.css": "^3.5.1",
     "body-parser": "^1.15.1",
     "express": "^4.14.0",
-    "nodemailer": "^2.4.2"
+    "nodemailer": "^2.4.2",
+    "recaptcha2": "^1.0.8"
   }
 }

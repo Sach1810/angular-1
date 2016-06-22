@@ -209,13 +209,13 @@ header {
     margin: 0 auto;
 
 }
-input[type=text], input[type=email], select, textarea {
+input[type=text], input[type=email], input[type=tel], select, textarea {
     width: 100%;
     padding: 7px;
     border-radius: 3px;
     border: 2px solid #343434;
     margin-bottom: 5px;
-    color: #fff;
+    color: #343434;
 }
 textarea {
     height: 100px;
@@ -255,6 +255,17 @@ button:hover {
 	color: #343434;
 	background-color: #fff;
     border: 2px solid #343434;
+}
+
+.g {
+    width:83%;
+    padding: 2% 0 2% 20%;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    border: 2px solid #343434;
+}
+form {
+    margin-bottom: 30px;
 }
 
 /* --------------------------------------------------*/

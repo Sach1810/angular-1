@@ -5,15 +5,17 @@
     <meta charset="utf-8">
     <title>That Perfect Design</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,300italic" rel="stylesheet" type="text/css">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/queries.css">
     <link rel="stylesheet" href="css/animate.css">
     <script type="text/javascript" src="angular/angular.js"></script>
     <script type="text/javascript" src="angular-animate/angular-animate.min.js"></script>
+    <script type="text/javascript" src="angular-recaptcha/release/angular-recaptcha.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script> -->
-    <!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
+
 
 </head>
 
@@ -50,13 +52,16 @@
     </section>
     <section id="contact">
         <h2>Contact Me</h2>
-        <form ng-submit="sendEmail()" id="contact-form">
-            <input ng-model="name" type="text" class="name" placeholder="Full name" />
-            <input ng-model="email" type="text" class="email" placeholder="Email" />
-            <textarea ng-model="message" placeholder="Type message here"></textarea>
-            <!-- <div class="g-recaptcha" data-sitekey="6LfvEiMTAAAAABn9oePTpUCTei2EwgjG-XodzsLK"></div> -->
+        <form name="contactForm" ng-submit="sendEmail()" id="contact-form" method="post">
+            <input ng-model="name" type="text" class="name" placeholder="Full name" required/>
+            <input ng-model="email" type="text" class="email" placeholder="Email" required/>
+            <input ng-model="number" type="tel" class="number" placeholder="Contact number" />
+            <input ng-model="subject" type="text" class="subject" placeholder="Subject" required/>
+            <textarea ng-model="message" placeholder="Type message here" required></textarea>
+            <div class="g">
+                <!-- <div class="g-recaptcha" data-sitekey="6LezrgoTAAAAAHR4tXHuy5yLgXwxlVZSrkwvq0jq"></div> -->
+            </div>
             <button type="submit">send now</button>
-            {{name}} {{email}}
         </form>
     </section>
 
@@ -77,7 +82,6 @@
       });
     </script> -->
     <!-- **********SCRIPTS********** -->
-    <!-- <script type="text/javascript" src="js/directives/scroll-animate-directive.js"></script> -->
     <script type="text/javascript" src="js/app.js"></script>
     <script src="js/directives/scroll-directive.js"></script>
     <script type="text/javascript" src="js/controllers/main-controller.js"></script>

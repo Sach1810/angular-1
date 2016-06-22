@@ -1,9 +1,9 @@
 app.factory('contact', ['$http', function($http) {
 
   var contact = {
-      sendInfo: function(info) {
-        return  $http.post('/contact-form', info).success (function(info){
-              console.log("success" + info);
+      sendInfo: function(message) {
+        return  $http.post('/contact-form', message).success (function(message){
+              console.log("success" + message);
           })
       },
 
